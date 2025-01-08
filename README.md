@@ -9,12 +9,6 @@ This is a **Recipe Application** built with **Nuxt 3**, leveraging **Tailwind CS
 - [Features](#features)
 - [Technologies](#technologies)
 - [Setup and Installation](#setup-and-installation)
-- [Scripts](#scripts)
-- [Folder Structure](#folder-structure)
-- [Key Features](#key-features)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
