@@ -2,6 +2,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { storeToRefs } from 'pinia';
 import { useRecipesStore } from '~/store/recipes.store';
+import type { Meal } from '~/entities/Meal.entity';
 
 const recipeService = useRecipeService();
 const { displayedMealsGetter, isLoading, hasMore } = storeToRefs(useRecipesStore());
@@ -40,10 +41,11 @@ onBeforeUnmount(() => {
         <filter-recipes />
     </div>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-      <recipe-card v-for="meal in displayedMealsGetter" :meal="meal" :key="meal.idMeal" />
+      <recipe-card v-for="meal in displayedMealsGetter" :meal="meal as Meal" :key="meal.idMeal" />
     </div>
     <div ref="sentinel" class="h-10"></div>
     <p v-if="isLoading">Loading...</p>
     <p v-if="!hasMore">No more recipes to display.</p>
   </div>
+  <recipe-info />
 </template>

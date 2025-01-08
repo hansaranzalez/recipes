@@ -76,8 +76,10 @@ export class RecipeService {
    * @param {string} id - The unique identifier of the meal.
    * @returns {Promise<any>} The details of the meal.
    */
-  public async getMealById(id: string): Promise<Meal> {
+  public async getMealById(id: string): Promise<void> {
+    this.store.setIsLoadingInfo(true);
     const response = await this.http.get(useEndpoints().getMealById(id));
-    return Meal.build(response.data.meals[0]);
+    this.store.setCurrentMeal(Meal.build(response.data.meals[0]));
+    this.store.setIsLoadingInfo(false);
   }
 }

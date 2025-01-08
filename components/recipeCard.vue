@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 import { Meal } from "~/entities/Meal.entity";
+import { useRecipesStore } from "~/store/recipes.store";
+const { setRecipeInfoModalVisible, setCurrentMeal } = useRecipesStore();
+const recipeService = useRecipeService();
 const router = useRouter();
 
 const props = defineProps({
@@ -11,8 +14,8 @@ const image = computed(() => {
 });
 
 const navigateToRecipe = () => {
-  console.log(props.meal?.idMeal);
-  navigateTo({ path: `/meals/${props.meal?.idMeal}`, replace: true });
+  recipeService.getMealById(props.meal?.idMeal as string);
+  setRecipeInfoModalVisible(true);
 };
 </script>
 

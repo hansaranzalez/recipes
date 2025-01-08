@@ -4,12 +4,8 @@ export default {
     routes: (_routes) => [
         {
             name: "home",
-            path: "/",
+            path: "/:id?",
             component: () => import("~/pages/home.vue"),
         },
-        {
-            path: '/meals/:id',
-            component: () => import('~/pages/recipeInfo.vue'),
-        }
     ],
 } satisfies RouterConfig;

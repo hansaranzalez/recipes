@@ -7,6 +7,7 @@ import { Meal } from "~/entities/Meal.entity";
  */
 export const useRecipesStore = defineStore("recipes", {
   state: () => ({
+    currentMeal: null as Meal | null,
     /**
      * All meals fetched from the API.
      * Used as the full dataset for client-side pagination.
@@ -38,6 +39,10 @@ export const useRecipesStore = defineStore("recipes", {
      * Indicates whether more data is available for pagination.
      */
     hasMore: true,
+
+    recipeInfoModalVisible: false,
+
+    isLoadingInfo: false,
   }),
   getters: {
     /**
@@ -57,6 +62,10 @@ export const useRecipesStore = defineStore("recipes", {
      * @returns {string} The query used for filtering.
      */
     queryGetter: (state) => state.query,
+
+    recipeInfoModalVisibleGetter: (state) => state.recipeInfoModalVisible,
+
+    currentMealGetter: (state) => state.currentMeal,
   },
   actions: {
     /**
@@ -100,12 +109,24 @@ export const useRecipesStore = defineStore("recipes", {
       this.isLoading = loading;
     },
 
+    setIsLoadingInfo(loading: boolean) {
+      this.isLoadingInfo = loading;
+    },
+
     /**
      * Updates the availability of more data for pagination.
      * @param {boolean} hasMore - Whether more data is available.
      */
     setHasMore(hasMore: boolean) {
       this.hasMore = hasMore;
+    },
+
+    setRecipeInfoModalVisible(visible: boolean) {
+      this.recipeInfoModalVisible = visible;
+    },
+
+    setCurrentMeal(meal: Meal | null) {
+      this.currentMeal = meal;
     },
   },
 });
