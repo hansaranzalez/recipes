@@ -6,8 +6,7 @@ const { allMealsGetter } = storeToRefs(useRecipesStore());
 const selectedIngredient = ref('');
 const ingredientsList = computed(() => {
   const ingredients = new Set<string>();
-  const clone = allMealsGetter.value.slice(0);
-  clone.forEach((meal) => {
+  allMealsGetter.value.forEach((meal) => {
     for (let i = 1; i <= 20; i++) {
       const ingredient = meal.getIngredients()[i - 1];
       if (ingredient) {

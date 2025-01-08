@@ -18,7 +18,7 @@ const navigateToRecipe = () => {
 
 <template>
   <UCard>
-    <img :src="image" alt="" srcset="" />
+    <img :src="image" @click="navigateToRecipe" />
 
     <template #footer>
       <div class="space-y-2 cursor-pointer" @click="navigateToRecipe">

@@ -1,75 +1,48 @@
-# Nuxt Minimal Starter
+# Recipe Application
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a **Recipe Application** built with **Nuxt 3**, leveraging **Tailwind CSS** for styling, **Nuxt UI** for components, **Axios** for API requests, and **Pinia** for state management. The app provides features like browsing recipes, filtering them by ingredients, and infinite scrolling for seamless navigation.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## Table of Contents
 
-```bash
-# npm
-npm install
+- [Features](#features)
+- [Technologies](#technologies)
+- [Setup and Installation](#setup-and-installation)
+- [Scripts](#scripts)
+- [Folder Structure](#folder-structure)
+- [Key Features](#key-features)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-# pnpm
-pnpm install
+---
 
-# yarn
-yarn install
+## Features
 
-# bun
-bun install
-```
+- **Recipe Listing**: Browse a list of recipes fetched from an external API.
+- **Filtering**: Filter recipes by ingredients dynamically.
+- **Infinite Scrolling**: Load more recipes as you scroll.
+- **Responsive Design**: Fully responsive using Tailwind CSS.
+- **Client-Side Pagination**: Handles large datasets with smooth pagination.
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
+## Technologies
 
-```bash
-# npm
-npm run dev
+- [Nuxt 3](https://nuxt.com/) - Framework for building modern web applications.
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework.
+- [Nuxt UI](https://ui.nuxt.com/) - Prebuilt UI components for Nuxt.
+- [Axios](https://axios-http.com/) - Promise-based HTTP client for API requests.
+- [Pinia](https://pinia.vuejs.org/) - State management library for Vue and Nuxt.
 
-# pnpm
-pnpm dev
+---
 
-# yarn
-yarn dev
+## Setup and Installation
 
-# bun
-bun run dev
-```
+### Prerequisites
 
-## Production
+Ensure you have the following installed:
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)

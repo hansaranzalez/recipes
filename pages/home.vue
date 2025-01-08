@@ -35,7 +35,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div>
+  <div class="max-w-[1200px] mx-auto py-5">
     <div>
         <filter-recipes />
     </div>
