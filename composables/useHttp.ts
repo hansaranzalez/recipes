@@ -2,11 +2,8 @@
 import axios from "axios";
 
 export const useHttp = () => {
-  const apiBaseUrl = useRuntimeConfig().apiBaseUrl;
-
   // Create an Axios instance with a base URL
   const http = axios.create({
-    baseURL: apiBaseUrl,
     headers: {
       "Content-Type": "application/json",
     },
